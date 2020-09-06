@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+.navLink{
+    color: black !important;
+    font-family: 'Oswald';
+    letter-spacing: 2px;
+}
+
+.brandName{
+    font-family: 'Oswald';
+}

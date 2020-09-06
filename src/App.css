@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;700&display=swap');
+
 .App {
   text-align: center;
 }
@@ -34,5 +36,73 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+#responsive-navbar-nav.show .navbar-nav{
+  background: #e6e6e6;
+  padding: 0px !important;
+  margin-bottom: 10px !important;
+}
+
+.headerWrapper{
+  min-height: 100vh;
+  background: #EDEDED;
+}
+
+.brandLogo{
+  margin: 0 auto;
+  margin-top: -10px !important;
+}
+
+.headerSubHeading{
+  font-size: 15px;
+  letter-spacing: 10px;
+  font-family: 'Oswald';
+  font-weight: 600;
+  margin-top: 1%;
+}
+
+.headerHeading{
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 220px;
+  color: white;
+  font-weight: 900;
+  font-family: 'Oswald';
+  text-shadow: 0px 7px 10px lightgray;
+}
+
+.headerImg{
+  margin: 0 auto;
+  width: 750px;
+  z-index: 10;
+  text-shadow: 0px 7px 10px lightgray;
+}
+
+.headerBtn{
+  width: 25%;
+  height: 55px;
+  margin: 0 auto;
+  font-size: 18px !important;
+  font-family: 'Oswald';
+  background: black !important;
+  font-weight: 400 !important;
+  letter-spacing: 5px;
+  margin-bottom: 5px;
+  border-radius: 0px !important;
+  border: 0px !important;
+  box-shadow: 0px 1px 5px black;
+}
+
+@media(max-width: 900px){
+  .headerHeading{
+    font-size: 180px;
+  }
+  
+  .headerImg{
+    width: 650px;
   }
 }
