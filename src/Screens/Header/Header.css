@@ -1,0 +1,174 @@
+.headerWrapper {
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+
+.brandLogo {
+  margin: 0 auto;
+  margin-top: -10px !important;
+}
+
+.headerSubHeading {
+  font-size: 15px;
+  letter-spacing: 10px;
+  font-family: "Oswald";
+  font-weight: 600;
+  margin-top: 1%;
+}
+
+.headerHeading {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 220px;
+  color: white;
+  font-weight: 900;
+  font-family: "Oswald";
+  text-shadow: 0px 7px 10px lightgray;
+}
+
+.headerImg {
+  margin: 0 auto;
+  width: 750px;
+  z-index: 10;
+  text-shadow: 0px 7px 10px lightgray;
+}
+
+.headerBtn {
+  width: 25%;
+  height: 55px;
+  margin: 0 auto;
+  font-size: 18px !important;
+  font-family: "Oswald";
+  background: black !important;
+  font-weight: 400 !important;
+  letter-spacing: 5px;
+  margin-bottom: 5px;
+  border-radius: 0px !important;
+  border: 0px !important;
+  box-shadow: 0px 1px 5px black;
+}
+
+@media (max-width: 900px) {
+  .headerHeading {
+    font-size: 180px;
+  }
+  .headerImg {
+    width: 650px;
+  }
+}
+
+@media(max-width: 750px){
+  .brandLogo{
+    margin-top: 10px !important;
+  }
+  .headerSubHeading{
+    font-size: 14px;
+  }
+  .headerHeading{
+    font-size: 160px;
+    top: 27%;
+  }
+  .headerImg{
+    width: 600px;
+  }
+  .headerBtn{
+    width: 40%;
+  }
+}
+
+@media(max-width: 670px){
+  /* .headerSubHeading{
+    font-size: 14px;
+  } */
+  .headerHeading{
+    font-size: 140px;
+    top: 27%;
+  }
+  .headerImg{
+    width: 550px;
+  }
+  .brandLogo{
+    margin-top: 10px !important;
+  }
+  /* .headerBtn{
+    width: 40%;
+  } */
+}
+
+@media(max-width: 670px){
+  .brandLogo{
+    margin-top: 50px !important;
+  }
+  .headerHeading{
+    font-size: 110px;
+    top: 36%;
+  }
+  .headerImg{
+    width: 450px;
+  }
+  .headerImg{
+    margin-top: 40px;
+  }
+  .headerBtn{
+    margin-top: 30px;
+    width: 50%;
+  }
+}
+
+@media(max-width: 460px){
+  .headerHeading{
+    font-size: 90px;
+    top: 40%;
+  }
+  .headerSubHeading{
+    font-size: 13px;
+    margin-top: 20px;
+  }
+  .headerImg{
+    width: 350px;
+  }
+}
+
+@media(max-width: 390px){
+  .brandLogo{
+    width: 60px;
+  }
+  .headerHeading{
+    font-size: 75px;
+    top: 43%;
+  }
+  .headerSubHeading{
+    font-size: 12px;
+    margin-top: 27px;
+  }
+  .headerImg{
+    width: 250px;
+  }
+  .headerBtn{
+    margin-top: 50px;
+  }
+}
+
+@media(max-width: 315px){
+  /* .brandLogo{
+    width: 60px;
+  } */
+  .headerHeading{
+    font-size: 65px;
+    top: 44%;
+  }
+  .headerSubHeading{
+    /* font-size: 12px; */
+    margin-top: 35px;
+  }
+  .headerImg{
+    width: 180px;
+  }
+  .headerBtn{
+    margin-top: 80px;
+    font-size: 16px !important;
+    width: 70%;
+  }
+}

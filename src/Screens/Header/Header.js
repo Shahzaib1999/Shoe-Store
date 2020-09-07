@@ -7,11 +7,13 @@ import ShoeImg from '../../assets/shoe.png';
 import Logo from '../../assets/logo.png';
 import BrandLogo from '../../assets/brandTag.png';
 
+import './Header.css';
+
 export const Header = () => {
   return (
     <div className="headerWrapper">
       <NavbarCom img={Logo} navLinks={[{ name: 'Home' }, { name: 'Products' }, { name: 'Cart' }]} />
-      <div style={{}} className="d-flex flex-column justify-content-center text-center position-relative">
+      <div className="d-flex flex-column justify-content-center text-center position-relative">
         <img src={BrandLogo} className="brandLogo" />
         <span className="headerSubHeading">BRAND BY</span>
         <span className="headerHeading">KICKASSO</span>

@@ -8,9 +8,9 @@ import { ProductDetail } from './Screens/ProductDetail/ProductDetail';
 function App() {
   return (
     <div>
-      {/* <Header /> */}
+      <Header />
       {/* <Product /> */}
-      <ProductDetail />
+      {/* <ProductDetail /> */}
     </div>
   );
 }

@@ -6,9 +6,9 @@ import './Navbar.css';
 export const NavbarCom = (props) => {
   return (
     <nav>
-      <Navbar collapseOnSelect expand="lg" >
+      <Navbar collapseOnSelect expand="lg">
         <Navbar.Brand href="#home">
-          <img src={props?.img} width={60} />
+          <img src={props?.img} width={40} height={40} />
           <span className="brandName"> Kickasso</span>
         </Navbar.Brand>
         <Navbar.Toggle />
