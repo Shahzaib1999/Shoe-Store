@@ -1,0 +1,48 @@
+.card {
+  background: transparent !important;
+  border: 0px;
+  padding: 50px;
+  padding-bottom: 10px;
+  transition: ease-out 0.6s;
+}
+
+.cardTitle {
+  font-family: "Oswald";
+  font-weight: bolder !important;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.cardPrice {
+  font-family: "Oswald";
+  color: red;
+  letter-spacing: 1.5px;
+}
+
+.card-body {
+  transition: ease-out 0.5s;
+  opacity: 0;
+}
+
+.card:hover {
+  background: white !important;
+  cursor: pointer;
+  transition: ease-in 0.4s;
+  box-shadow: 10px 10px 10px lightgray;
+}
+
+.card:hover .card-body {
+  opacity: 0.9;
+  transition: ease-in 0.6s;
+}
+
+@media (max-width: 400px) {
+  .cardTitle {
+    font-family: "Oswald";
+    font-size: 18px;
+  }
+  .cardPrice {
+    font-family: "Oswald";
+    font-size: 16px;
+  }
+}
