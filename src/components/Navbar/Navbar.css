@@ -1,17 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
 
-.navbar {
-  /* box-shadow: 17px 0px 6px lightgrey;
-  z-index: 9;
-  background: white; */
-}
-
 .navLink {
   color: black !important;
   font-family: "Oswald";
   letter-spacing: 2px;
+  /* font-weight: 600; */
+}
+
+.navLink:hover {
+  text-decoration: none;
 }
 
 .brandName {
   font-family: "Oswald";
+  margin-top: 50px !important;
 }

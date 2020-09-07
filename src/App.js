@@ -4,11 +4,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Header } from './Screens/Header/Header';
 import { Product } from './Screens/Products/Products';
 import { ProductDetail } from './Screens/ProductDetail/ProductDetail';
+import { RouterConfig } from './Router';
 
 function App() {
   return (
     <div>
-      <Header />
+      <RouterConfig />
+      {/* <Header /> */}
       {/* <Product /> */}
       {/* <ProductDetail /> */}
     </div>

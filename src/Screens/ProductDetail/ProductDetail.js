@@ -1,5 +1,4 @@
 import React from 'react';
-import { NavbarCom } from '../../components/Navbar/Navbar';
 import { Col, Row, Button } from 'react-bootstrap';
 
 import Logo from '../../assets/logo.png';
@@ -10,7 +9,6 @@ import './ProductDetail.css';
 export const ProductDetail = (props) => {
   return (
     <div>
-      <NavbarCom img={Logo} navLinks={[{ name: 'Home' }, { name: 'Products' }, { name: 'Cart' }]} />
       <div className="headingWrapper">
         <h1 className="heading">
           Blacked-Out OG Camo NMD

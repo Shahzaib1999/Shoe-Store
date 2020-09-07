@@ -1,13 +1,16 @@
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
+import { useLocation, Link } from 'react-router-dom'
 
 import './Navbar.css';
 
 export const NavbarCom = (props) => {
+  let location = useLocation();
+  console.log(location.pathname);
   return (
     <nav>
-      <Navbar collapseOnSelect expand="lg">
-        <Navbar.Brand href="#home">
+      <Navbar collapseOnSelect expand="lg" style={location.pathname === '/' ? { background: '#f5f5f5' } : { boxShadow: '17px 0px 6px lightgrey', zIndex: 9 }}>
+        <Navbar.Brand href="/">
           <img src={props?.img} width={40} height={40} />
           <span className="brandName"> Kickasso</span>
         </Navbar.Brand>
@@ -16,7 +19,7 @@ export const NavbarCom = (props) => {
           <Nav>
             {props?.navLinks?.map(((navLink, ind) => (
               <Nav.Link key={ind} className="navLink">
-                {navLink.name}
+                <Link to={navLink.link} className="navLink">{navLink.name}</Link>
               </Nav.Link>
             )))}
           </Nav>
