@@ -31,7 +31,7 @@ export const Cart = () => {
                     {shoes.map(shoe => (
                       <ListGroup.Item className="d-flex justify-content-between align-items-center mt-2" key={shoe.id}>
                         <div className="productDetailWrapper">
-                          <img src={img} width={70} alt="shoe" />
+                          <img src={shoe.images[0]} width={70} alt="shoe" />
                           <span className="productName ml-2">{shoe.name}</span>
                         </div>
                         <div>
