@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { Col, Row, Container, Card, Button, ListGroup, FormControl } from 'react-bootstrap';
+import swal from 'sweetalert';
 
 import './Cart.css';
 
@@ -7,7 +8,13 @@ import { GlobalContext } from "../../context/GlobalState";
 import img from '../../assets/shoes/shoe1a.png';
 
 export const Cart = () => {
-  const { shoes } = useContext(GlobalContext);
+  const { shoes,onBuy } = useContext(GlobalContext);
+
+  const onBuyHandler = () => {
+    swal("Purchase Succesfull!", "You successfully purchased all items!", "success");
+    onBuy();
+  }
+
   return (
     <div className="mainWrapper">
       <div className="checkoutWrapper">
@@ -60,7 +67,7 @@ export const Cart = () => {
               <Card className="mt-5">
                 <Card.Header className="cardHeader mx-3 pl-2">Payment</Card.Header>
                 <Card.Body>
-                  <Button variant="dark buyBtn mt-2" block>Buy</Button>
+                  <Button variant="dark buyBtn mt-2" block onClick={onBuyHandler}>Buy</Button>
                 </Card.Body>
               </Card>
             </Col>

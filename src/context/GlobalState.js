@@ -12,14 +12,21 @@ export const GlobalProvider = ({ children }) => {
   const [state, dispatch] = useReducer(ShoeReducer, initialState);
 
   const addToCart = (cartItem) => {
-      dispatch({
-        type: "ADD_TO_CART",
-        payload: cartItem,
-      });
-    
+    dispatch({
+      type: "ADD_TO_CART",
+      payload: cartItem
+    });
   };
+
+  const onBuy = (payload) => {
+    dispatch({
+      type: "Empty_Cart",
+      payload: payload
+    })
+  }
+
   return (
-    <GlobalContext.Provider value={{ shoes: state.shoes, addToCart }}>
+    <GlobalContext.Provider value={{ shoes: state.shoes, addToCart, onBuy }}>
       {children}
     </GlobalContext.Provider>
   );
