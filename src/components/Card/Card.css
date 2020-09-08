@@ -6,6 +6,10 @@
   transition: ease-out 0.6s;
 }
 
+.card:hover .cardTitle{
+  text-decoration: none;
+}
+
 .cardTitle {
   font-family: "Oswald";
   font-weight: bolder !important;

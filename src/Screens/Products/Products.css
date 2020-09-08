@@ -3,3 +3,7 @@
   max-width: 1350px;
   /* padding-bottom: 30px; */
 }
+
+.productsWrapper:hover .navLink{
+  text-decoration: none;
+}

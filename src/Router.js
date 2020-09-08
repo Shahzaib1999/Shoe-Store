@@ -20,7 +20,8 @@ export const RouterConfig = () => {
       <Routes>
         <Route path="/" element={<Header />} />
         <Route path="products" element={<Product />} />
-        <Route path="products/:name" element={<ProductDetail />} />
+        <Route path="product/:id" element={<ProductDetail />} />
+        {/* <Route path="*" element={() => (<p className="mt-5">Sorry your page was not found!</p>)} /> */}
       </Routes>
     </Router>
   );

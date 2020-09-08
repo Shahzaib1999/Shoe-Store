@@ -1,33 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Col, Row, Button } from 'react-bootstrap';
-
-import Logo from '../../assets/logo.png';
-import shoe2 from '../../assets/shoe2.png';
+import { useParams } from 'react-router-dom';
+import Magnifier from "react-magnifier";
 
 import './ProductDetail.css';
 
-export const ProductDetail = (props) => {
+import Shoes from '../../data';
+
+export const ProductDetail = () => {
+  const [imageInd, setImageInd] = useState(0);
+  const { id } = useParams();
+  let shoe = Shoes.find(x => x.id === +(id))
+  if (!shoe) {
+    return <p>Product not found</p>
+  }
   return (
     <div>
       <div className="headingWrapper">
         <h1 className="heading">
-          Blacked-Out OG Camo NMD
-          </h1>
-        <p className="price">$245.00</p>
+          {shoe?.name}
+        </h1>
+        <p className="price">${shoe?.price}.00</p>
       </div>
       <Row className="mainWrapper m-0">
         <Col xs={12} sm={12} md={12} lg={6} className="imgWrapper">
-          <img src={shoe2} className="img" />
-          <div>
-            <img src={shoe2} className="thumbImg active" />
-            <img src={shoe2} className="thumbImg ml-4" />
-            <img src={shoe2} className="thumbImg ml-4"  />
+          <Magnifier
+            src={shoe?.images[imageInd]}
+            className="img mt-4"
+          />
+          <div className="thumbnailWrapper">
+            {shoe?.images.map((img, ind) => (
+              <img src={img} className={ind === imageInd ? "thumbImg ml-4 active" : "thumbImg ml-4"} key={ind} onClick={() => setImageInd(ind)} alt={shoe.name} />
+            ))}
           </div>
         </Col>
         <Col xs={12} sm={12} md={12} lg={6} className="descriptionWrapper">
           <p className="description">
-            As with all art, each product is made with the customers satisfaction in mind, however please be mindful of the art and wear each product with care.
-            Thank you for your continuous support!
+            {shoe?.description}
           </p>
           <Button className="cartBtn">+ ADD TO CART</Button>
         </Col>

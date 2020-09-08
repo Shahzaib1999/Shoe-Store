@@ -1,5 +1,5 @@
 .mainWrapper {
-  height: 88vh;
+  height: 91vh;
   align-items: center;
 }
 
@@ -7,7 +7,7 @@
   position: absolute;
   z-index: 9;
   left: 50%;
-  top: 25%;
+  top: 22%;
   transform: translate(-50%, -49%);
   font-family: "Oswald";
 }
@@ -35,11 +35,12 @@
 }
 
 .img {
-  width: 80%;
+  width: 80% !important;
 }
 
 .thumbImg {
   width: 80px;
+  height: 50px;
   padding: 5px;
   border: 1px solid lightgray;
   opacity: 0.5;
@@ -79,19 +80,19 @@
   letter-spacing: 5px;
   border-radius: 0px !important;
   border: 0px !important;
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
 @media (max-width: 1320px) {
   .description {
-    margin: 110px 60px 10px 80px;
+    margin: 80px 60px 10px 80px;
   }
   .cartBtn {
-    margin-top: 40px;
+    margin-top: 0px;
   }
 }
 
-@media (max-width: 1128px) {
+@media (max-width: 1150px) {
   .heading {
     font-size: 40px;
   }
@@ -99,14 +100,14 @@
     font-size: 19px;
   }
   .description {
-    margin: 60px 60px 10px 80px;
-  }
-  .cartBtn {
-    margin-top: 10px;
+    margin: 50px 60px 0px 80px;
   }
 }
 
-@media (max-width: 1029px) {
+@media (max-width: 1081px) {
+  .description {
+    margin: 30px 50px 0px 70px;
+  }
   .cartBtn {
     width: 50%;
     font-size: 18px !important;
@@ -158,6 +159,10 @@
   .price {
     font-size: 15px;
   }
+  .thumbnailWrapper{
+    margin-left: -30px;
+    display: flex;
+  }
   .description {
     margin: 60px 30px 20px 30px;
   }
@@ -168,6 +173,12 @@
 }
 
 @media (max-width: 333px) {
+  .imgWrapper{
+    padding: 0;
+  }
+  .headingWrapper {
+    bottom: -150px;
+  }
   .heading {
     font-size: 23px;
   }
@@ -175,7 +186,7 @@
     font-size: 15px;
   }
   .description {
-    margin: 40px 10px 10px 10px;
+    margin: 50px 10px 40px 10px;
   }
   .cartBtn {
     width: 80%;
