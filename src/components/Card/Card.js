@@ -6,7 +6,7 @@ import './Card.css';
 export const CardCom = (props) => {
   // console.log(props.product);
   return (
-    <Card>
+    <Card className="myCard">
       <Card.Img variant="top" src={props.product.images[0]} />
       <Card.Body className="text-center">
         <Card.Title className="cardTitle">{props.product.name}</Card.Title>

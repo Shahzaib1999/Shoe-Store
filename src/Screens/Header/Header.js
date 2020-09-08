@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 import ShoeImg from '../../assets/shoe.png';
 import BrandLogo from '../../assets/brandTag.png';
@@ -14,7 +15,10 @@ export const Header = () => {
         <span className="headerSubHeading">BRAND BY</span>
         <span className="headerHeading">KICKASSO</span>
         <img src={ShoeImg} className="headerImg" alt="main_logo" />
-        <Button className="headerBtn">SHOP NOW</Button>
+        <Link to="products">
+          <Button className="headerBtn">
+            SHOP NOW
+          </Button></Link>
       </div>
     </div>
   );

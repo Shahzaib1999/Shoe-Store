@@ -1,0 +1,85 @@
+.mainWrapper {
+  background: #f5f5f5;
+}
+
+.checkoutWrapper {
+  padding-top: 5%;
+  text-align: center;
+}
+
+.checkout {
+  font-size: 55px;
+  font-family: "Oswald";
+  letter-spacing: 3px;
+}
+
+.shoppingCartWrapper {
+  padding-top: 40px;
+}
+
+.cardHeader {
+  background: white !important;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.productDetailWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.productName,.productPrice{
+  font-size: 20px;
+  font-weight: 500 !important;
+  color: #636363;
+}
+
+.minus {
+  width: 40px;
+  height: 36px;
+  border: 1px solid lightgrey;
+  border-radius: 5px 0px 0px 5px;
+  font-weight: bold;
+}
+
+.plus {
+  width: 40px;
+  height: 36px;
+  border: 1px solid lightgrey;
+  border-radius: 0px 5px 5px 0px;
+  font-weight: bold;
+}
+
+.quantity {
+  background: white;
+  width: 30%;
+  height: 35px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid lightgrey;
+}
+
+.productTotal{
+  font-size: 22px;
+  font-weight: 500 !important;
+  color: black;
+}
+
+.buyBtn{
+  height: 45px;
+  font-size: 18px !important;
+  font-family: "Oswald";
+  background: black !important;
+  font-weight: 400 !important;
+  letter-spacing: 5px;
+  margin-bottom: 5px;
+  border-radius: 0px !important;
+  border: 0px !important;
+}
+
+@media(max-width: 991px){
+  .paymentWrapper{
+    margin-top: 25px;
+  }
+}
