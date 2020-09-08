@@ -49,7 +49,7 @@
 
 .thumbImg:hover {
   opacity: 0.7;
-  transition: ease .5s;
+  transition: ease 0.5s;
 }
 
 .active {
@@ -81,6 +81,10 @@
   border-radius: 0px !important;
   border: 0px !important;
   margin-top: 40px;
+}
+
+.disabled {
+  opacity: 0.65;
 }
 
 @media (max-width: 1320px) {
@@ -159,7 +163,7 @@
   .price {
     font-size: 15px;
   }
-  .thumbnailWrapper{
+  .thumbnailWrapper {
     margin-left: -30px;
     display: flex;
   }
@@ -173,7 +177,7 @@
 }
 
 @media (max-width: 333px) {
-  .imgWrapper{
+  .imgWrapper {
     padding: 0;
   }
   .headingWrapper {

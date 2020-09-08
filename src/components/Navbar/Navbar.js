@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Navbar, Nav,Badge  } from 'react-bootstrap';
 import { useLocation, Link } from 'react-router-dom'
 
 import './Navbar.css';
 
+import { GlobalContext } from "../../context/GlobalState";
+
 export const NavbarCom = (props) => {
+  const { shoes } = useContext(GlobalContext);
   let location = useLocation();
   return (
     <nav>
@@ -19,7 +22,7 @@ export const NavbarCom = (props) => {
             {props?.navLinks?.map(((navLink, ind) => (
               <Nav.Link as="li" key={ind} className="navLink">
                 <Link to={navLink.link} className="navLink">{navLink.name}</Link>
-                {navLink.link === 'cart' && <Badge pill variant="dark ml-1 pt-1">1</Badge>}
+                {navLink.link === 'cart' && <Badge pill variant="dark ml-1 pt-1">{shoes.length > 0 && shoes.length}</Badge>}
               </Nav.Link>
             )))}
           </Nav>

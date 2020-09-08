@@ -1,13 +1,16 @@
 import React from 'react';
-import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+import './App.css';
+
 import { RouterConfig } from './Router';
+import { GlobalProvider } from './context/GlobalState';
 
 function App() {
   return (
-    <div>
+    <GlobalProvider>
       <RouterConfig />
-    </div>
+    </GlobalProvider>
   );
 }
 

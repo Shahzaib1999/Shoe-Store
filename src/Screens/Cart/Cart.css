@@ -17,6 +17,11 @@
   padding-top: 40px;
 }
 
+.cartCard {
+  height: 365px;
+  overflow-y: scroll;
+}
+
 .cardHeader {
   background: white !important;
   font-size: 24px;
@@ -29,7 +34,8 @@
   align-items: center;
 }
 
-.productName,.productPrice{
+.productName,
+.productPrice {
   font-size: 20px;
   font-weight: 500 !important;
   color: #636363;
@@ -60,13 +66,13 @@
   border: 1px solid lightgrey;
 }
 
-.productTotal{
+.productTotal {
   font-size: 22px;
   font-weight: 500 !important;
   color: black;
 }
 
-.buyBtn{
+.buyBtn {
   height: 45px;
   font-size: 18px !important;
   font-family: "Oswald";
@@ -78,8 +84,33 @@
   border: 0px !important;
 }
 
-@media(max-width: 991px){
-  .paymentWrapper{
+@media (max-width: 991px) {
+  .paymentWrapper {
     margin-top: 25px;
   }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(194, 193, 193); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #888; 
+}
+
+/* Add transaction */
+.addTransactionWrapper{
+  margin: 0 50px 15px 50px;
 }

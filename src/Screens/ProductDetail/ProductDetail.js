@@ -1,16 +1,23 @@
-import React, { useState } from 'react';
-import { Col, Row, Button } from 'react-bootstrap';
+import React, { useState, useContext } from 'react';
+import { Col, Row, Button, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import Magnifier from "react-magnifier";
 
 import './ProductDetail.css';
 
+import { GlobalContext } from "../../context/GlobalState";
 import Shoes from '../../data';
 
 export const ProductDetail = () => {
+  const { addToCart, shoes } = useContext(GlobalContext);
   const [imageInd, setImageInd] = useState(0);
   const { id } = useParams();
-  let shoe = Shoes.find(x => x.id === +(id))
+  let shoe = Shoes.find(x => x.id === +(id));
+  
+  const addToCartHandler = (param) => {
+    addToCart(param);
+  };
+
   if (!shoe) {
     return <p>Product not found</p>
   }
@@ -38,7 +45,16 @@ export const ProductDetail = () => {
           <p className="description">
             {shoe?.description}
           </p>
-          <Button className="cartBtn">+ ADD TO CART</Button>
+          {(shoes.length > 0 && shoes.some(x => x.id === shoe.id)) ?
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip id="button-tooltip">Already added</Tooltip>}
+            >
+              <Button className="cartBtn disabled">+ ADD TO CART</Button>
+            </OverlayTrigger>
+            :
+            <Button className="cartBtn" onClick={() => addToCartHandler(shoe)}>+ ADD TO CART</Button>
+          }
         </Col>
       </Row>
     </div>
